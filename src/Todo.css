@@ -1,0 +1,245 @@
+body {
+    background: linear-gradient(to right, #000000, #2D3436); /* Background gradient */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(270deg, #A00000, #C62128, #A00000);
+    background-size: 600% 600%;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 400px; /* Set the container width to 60% of the viewport */
+    margin:0 auto;
+    box-shadow: 0 0 10px 2px rgba(29, 28, 28, 0.8), /* Outer red glow */
+    0 0 20px 4px rgba(255, 0, 0, 0.6), /* Extended red glow */
+    0 0 25px 8px rgba(255, 0, 0, 0.4); /* Fainter red glow */
+
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Position container relative for absolute positioning of icons */
+    z-index: 2; /* Ensures the container is above the icons */
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative; /* Position relative to allow pseudo-elements */
+    animation: glitch 2s infinite; /* Apply the glitch animation */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+    }
+    20% {
+        transform: translate(-2px, -2px);
+        opacity: 0.6;
+    }
+    30% {
+        transform: translate(2px, -2px);
+        opacity: 0.8;
+    }
+    40% {
+        transform: translate(2px, 2px);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-2px, -2px);
+        opacity: 0.7;
+    }
+    60% {
+        transform: translate(2px, -2px);
+        opacity: 0.9;
+    }
+    70% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+    }
+    80% {
+        transform: translate(2px, 2px);
+        opacity: 0.9;
+    }
+    90% {
+        transform: translate(-2px, -2px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+h1::before, h1::after {
+    content: attr(data-text); /* Use the content of the h1 as pseudo-elements' content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #f00; /* Red color for the glitch effect */
+    z-index: -1;
+    opacity: 0.8;
+}
+
+h1::before {
+    left: -2px;
+    text-shadow: -2px 0 cyan;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+h1::after {
+    left: 2px;
+    text-shadow: -2px 0 lime;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+    0% {
+        clip: rect(44px, 550px, 90px, 0);
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        clip: rect(10px, 550px, 80px, 0);
+        transform: translate(2px, 2px);
+    }
+    100% {
+        clip: rect(85px, 550px, 140px, 0);
+        transform: translate(-2px, 2px);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip: rect(60px, 550px, 120px, 0);
+        transform: translate(2px, 2px);
+    }
+    50% {
+        clip: rect(90px, 550px, 100px, 0);
+        transform: translate(-2px, -2px);
+    }
+    100% {
+        clip: rect(30px, 550px, 70px, 0);
+        transform: translate(2px, -2px);
+    }
+}
+
+input[type="text"] {
+   
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 12px ;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #C62128;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #A00000;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+li button{
+    margin-left: 15px;
+    background-color: red;
+    flex-shrink: 0;
+}
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    animation: moveIcons 10s linear infinite;
+    z-index: 1; /* Icons are behind the container */
+}
+
+.icon1 { background-image: url('https://cdn-icons-png.flaticon.com/128/9099/9099168.png'); top: -50px; left: 10%; animation-delay: 0s; }
+.icon2 { background-image: url('https://cdn-icons-png.flaticon.com/128/16334/16334172.png'); top: -50px; left: 30%; animation-delay: 1s; }
+.icon3 { background-image: url('https://cdn-icons-png.flaticon.com/128/8173/8173091.png'); top: -50px; left: 50%; animation-delay: 2s; }
+.icon4 { background-image: url('https://cdn-icons-png.flaticon.com/128/4698/4698578.png'); top: -50px; left: 70%; animation-delay: 3s; }
+
+
+@keyframes moveIcons {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust h1 size on smaller screens */
+    }
+
+    .container {
+        width: 90%; /* Increase width for smaller screens */
+        padding: 20px; /* Reduce padding for better fit */
+    }
+
+    button {
+        width: 100%; /* Full width button on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Smaller h1 size for very small screens */
+    }
+
+    li {
+        font-size: 0.9rem; /* Smaller text in list items */
+        padding: 5px; /* Adjust padding for list items */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller button text */
+    }
+}
