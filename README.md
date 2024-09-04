@@ -1,6 +1,66 @@
-# Getting Started with Create React App
+# Animated-To-Do-List-Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple yet functional Todo List application built with React. The app allows users to add, edit, and delete tasks, with a user-friendly interface and responsive design.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (v14 or above)
+- [npm](https://www.npmjs.com/) (v6 or above) or [yarn](https://yarnpkg.com/) (v1.22 or above)
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/AkshatDev2002/todo-app.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd todo-app
+    ```
+
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run:
+```bash
+npm start 
+```
+
+This will launch the application in your default web browser at http://localhost:3000.
+
+The page will automatically reload if you make any edits to the code.
+
+### Project Structure
+The project follows a simple and clean architecture:
+
+1. src/: Contains all the source code
+2. components/: Reusable UI components
+3. Todo.jsx: Main component that handles the todo list logic
+4. App.jsx: Root component that brings everything together
+5. index.js: Entry point for the React app
+6. Todo.css: CSS file for styling the Todo component
+
+### Key Features and React Concepts
+
+1. Functional Components: The app is built using React functional components, which are simpler and more concise than class components.
+2. React Hooks: The use of the useState hook allows for managing component state within functional components.
+3. Conditional Rendering: The app uses conditional rendering to switch between adding a new todo and editing an existing one.
+4. Event Handling: React event handlers are used to manage user interactions like adding, editing, and deleting todos.
+5. CSS Styling: Custom CSS is used for styling the application, including a lamp animation and background icons.
+
+### Contributing
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+### License
+This project is open-source and available under the MIT License.
 
 ## Available Scripts
 
@@ -32,39 +92,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
