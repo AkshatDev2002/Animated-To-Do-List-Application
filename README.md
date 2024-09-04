@@ -2,6 +2,9 @@
 
 This is a simple yet functional Todo List application built with React. The app allows users to add, edit, and delete tasks, with a user-friendly interface and responsive design.
 
+## Project Demo
+https://github.com/user-attachments/assets/749da219-b4fc-4cee-8105-ff5c6778feb0
+
 ## Getting Started
 
 ### Prerequisites
